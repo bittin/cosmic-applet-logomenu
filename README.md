@@ -25,7 +25,7 @@ flatpak install dev.cappsy.CosmicExtAppletLogoMenu
 
 ## Arch User Repository installation
 
-The applet and settings app can be installed directly from [one package in the AUR](https://aur.archlinux.org/packages/cosmic-ext-applet-logomenu), and this will get you very latest code and not be tied to tagged releases. You will need `base-devel` and `git` if you don't have them already.
+The applet and settings app can be installed directly from [one package in the AUR](https://aur.archlinux.org/packages/cosmic-ext-applet-logomenu-git), and this will get you very latest code and not be tied to tagged releases. You will need `base-devel` and `git` if you don't have them already.
 
 ```sh
 sudo pacman -S base-devel git
