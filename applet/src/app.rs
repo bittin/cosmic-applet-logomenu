@@ -216,7 +216,7 @@ impl Application for LogoMenu {
                 {
                     match Command::new("flatpak-spawn")
                         .arg("--host")
-                        .arg("sh")
+                        .arg("bash")
                         .arg("-c")
                         .arg(&action)
                         .spawn()
@@ -225,7 +225,7 @@ impl Application for LogoMenu {
                         Err(e) => eprintln!("Error executing command: {}", e),
                     }
                 } else {
-                    match Command::new("sh")
+                    match Command::new("bash")
                         .arg("-c")
                         .arg(if &action == "cosmic-logomenu-settings" {
                             "cosmic-ext-logomenu-settings"

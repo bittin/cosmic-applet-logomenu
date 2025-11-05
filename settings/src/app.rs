@@ -189,7 +189,7 @@ impl cosmic::Application for AppModel {
                 content: about(&self.about_page, |s| Message::OpenUrl(s.to_string())),
                 on_close: Message::ToggleContextPage(ContextPage::About),
                 header: None,
-                header_actions: Vec::new(),
+                actions: None,
                 footer: None,
             }),
         }
