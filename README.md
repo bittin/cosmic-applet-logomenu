@@ -1,4 +1,4 @@
-# COSMIC™ Logo Menu
+# Logo Menu (for the COSMIC™ Desktop)
 
 ![The Logo Menu logo, showing a mouse pointer clicking on a logo of Pop!_OS.](https://raw.githubusercontent.com/cappsyco/cosmic-ext-applet-logomenu/refs/heads/main/res/logo.png)
 
