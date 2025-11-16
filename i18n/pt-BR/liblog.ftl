@@ -53,7 +53,7 @@ text-editor = Editor de Texto
 # Default menu items and power options
 about-system = Sobre o sistema
 menu-settings = Configurações do menu...
-applications = Aplicações
+applications = Aplicativos
 launcher = Launcher
 workspaces = Áreas de Trabalho
 terminal = Terminal
