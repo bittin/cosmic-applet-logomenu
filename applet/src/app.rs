@@ -185,6 +185,7 @@ impl Application for LogoMenu {
                 if is_flatpak {
                     if let Err(_err) = Command::new("flatpak-spawn")
                         .arg("--host")
+                        .arg("--env=PATH=/run/current-system/sw/bin:/usr/bin:/bin")
                         .arg("cosmic-osd")
                         .arg(osd_arg)
                         .spawn()
@@ -216,7 +217,7 @@ impl Application for LogoMenu {
                 {
                     match Command::new("flatpak-spawn")
                         .arg("--host")
-                        .arg("bash")
+                        .arg("/bin/sh")
                         .arg("-c")
                         .arg(&action)
                         .spawn()
