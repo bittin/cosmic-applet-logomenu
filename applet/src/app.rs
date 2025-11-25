@@ -185,9 +185,6 @@ impl Application for LogoMenu {
                 if is_flatpak {
                     if let Err(_err) = Command::new("flatpak-spawn")
                         .arg("--host")
-                        .arg("/bin/sh")
-                        .arg("-c")
-                        .arg("-l")
                         .arg("cosmic-osd")
                         .arg(osd_arg)
                         .spawn()
