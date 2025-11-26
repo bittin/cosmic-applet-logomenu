@@ -10,7 +10,7 @@ zbus = { version = "4", default-features = false }
 logind-zbus = "4.0"
 rustix = { version = "0.38", features = ["process"] }
 liblog = { path = "../liblog" }
-ashpd = "0.12.0"
+os_info = "3"
 
 [dependencies.libcosmic]
 git = "https://github.com/pop-os/libcosmic.git"

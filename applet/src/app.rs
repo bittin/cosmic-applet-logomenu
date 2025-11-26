@@ -185,7 +185,11 @@ impl Application for LogoMenu {
                 if is_flatpak {
                     if let Err(_err) = Command::new("flatpak-spawn")
                         .arg("--host")
-                        .arg("cosmic-osd")
+                        .arg(if is_nixos() {
+                            "/run/current-system/sw/cosmic-osd"
+                        } else {
+                            "cosmic-osd"
+                        })
                         .arg(osd_arg)
                         .spawn()
                     {
@@ -215,11 +219,7 @@ impl Application for LogoMenu {
                     && action != "cosmic-logomenu-settings"
                 {
                     match Command::new("flatpak-spawn")
-                        .arg("--host")
-                        .arg("/bin/sh")
-                        .arg("-c")
-                        .arg("-l")
-                        .arg(&action)
+                        .args(["--host", "/bin/sh", "-c", "-l", &action])
                         .spawn()
                     {
                         Ok(_) => {}
@@ -270,4 +270,9 @@ fn is_flatpak() -> bool {
 #[cfg(not(feature = "flatpak"))]
 fn is_flatpak() -> bool {
     false
+}
+
+fn is_nixos() -> bool {
+    let info = os_info::get();
+    info.os_type() == os_info::Type::NixOS
 }
