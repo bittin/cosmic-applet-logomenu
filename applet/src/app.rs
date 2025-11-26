@@ -186,7 +186,7 @@ impl Application for LogoMenu {
                     if let Err(_err) = Command::new("flatpak-spawn")
                         .arg("--host")
                         .arg(if is_nixos() {
-                            "/run/current-system/sw/cosmic-osd"
+                            "/run/current-system/sw/bin/cosmic-osd"
                         } else {
                             "cosmic-osd"
                         })
