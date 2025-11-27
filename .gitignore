@@ -16,6 +16,7 @@ vendor.tar
 /flatpak-builder-tools
 /.flatpak-builder
 /repo
+repo.tar
 /flatpak-out
 *.deb
 *.rpm

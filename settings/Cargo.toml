@@ -1,6 +1,6 @@
 [package]
 name = "cosmic-ext-logomenu-settings"
-version = "0.6.8"
+version = "0.6.9"
 edition = "2024"
 license = "GPL-3.0"
 description = "Settings application for COSMIC Logo Menu applet"

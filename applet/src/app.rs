@@ -22,6 +22,7 @@ pub struct LogoMenu {
     core: Core,
     popup: Option<Id>,
     config: LogoMenuConfig,
+    osd_cmd: String,
 }
 
 #[derive(Debug, Clone)]
@@ -58,10 +59,17 @@ impl Application for LogoMenu {
             })
             .unwrap_or_default();
 
+        // get cosmic_osd command based on the distro
+        let osd_cmd = match is_nixos() {
+            true => String::from("/run/current-system/sw/bin/cosmic-osd"),
+            false => String::from("cosmic-osd"),
+        };
+
         let app = LogoMenu {
             core,
             popup: None,
             config,
+            osd_cmd,
         };
         (app, Task::none())
     }
@@ -185,8 +193,8 @@ impl Application for LogoMenu {
                 if is_flatpak {
                     if let Err(_err) = Command::new("flatpak-spawn")
                         .arg("--host")
-                        .arg("cosmic-osd")
-                        .arg(osd_arg)
+                        .arg(&self.osd_cmd)
+                        .arg(&osd_arg)
                         .spawn()
                     {
                         return action.perform();
@@ -215,10 +223,7 @@ impl Application for LogoMenu {
                     && action != "cosmic-logomenu-settings"
                 {
                     match Command::new("flatpak-spawn")
-                        .arg("--host")
-                        .arg("bash")
-                        .arg("-c")
-                        .arg(&action)
+                        .args(["--host", "/bin/sh", "-c", "-l", &action])
                         .spawn()
                     {
                         Ok(_) => {}
@@ -269,4 +274,8 @@ fn is_flatpak() -> bool {
 #[cfg(not(feature = "flatpak"))]
 fn is_flatpak() -> bool {
     false
+}
+
+fn is_nixos() -> bool {
+    fs::exists("/run/host/etc/NIXOS").unwrap_or(false)
 }

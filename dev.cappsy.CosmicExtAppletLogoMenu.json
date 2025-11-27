@@ -3,7 +3,9 @@
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "24.08",
   "sdk": "org.freedesktop.Sdk",
-  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
   "base": "com.system76.Cosmic.BaseApp",
   "base-version": "stable",
   "finish-args": [
@@ -17,6 +19,7 @@
     "--talk-name=org.freedesktop.ScreenSaver",
     "--talk-name=org.freedesktop.DisplayManager",
     "--filesystem=xdg-config/cosmic:rw",
+    "--filesystem=host-etc:ro",
     "--share=ipc"
   ],
   "build-options": {
