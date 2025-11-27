@@ -276,17 +276,6 @@ fn is_flatpak() -> bool {
     false
 }
 
-fn detect_os() -> Option<String> {
-    let os_release = fs::read_to_string("/run/host/etc/os-release").ok()?;
-
-    for line in os_release.lines() {
-        if line.starts_with("ID=") {
-            return Some(line.trim_start_matches("ID=").trim_matches('"').to_string());
-        }
-    }
-    None
-}
-
 fn is_nixos() -> bool {
-    detect_os().map(|id| id == "nixos").unwrap_or(false)
+    fs::exists("/run/host/etc/NIXOS").unwrap_or(false)
 }

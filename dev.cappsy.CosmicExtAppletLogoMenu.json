@@ -20,7 +20,6 @@
     "--talk-name=org.freedesktop.DisplayManager",
     "--filesystem=xdg-config/cosmic:rw",
     "--filesystem=host-etc:ro",
-    "--filesystem=host-os:ro",
     "--share=ipc"
   ],
   "build-options": {
