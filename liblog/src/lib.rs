@@ -85,7 +85,7 @@ pub struct MenuItem {
 }
 impl MenuItem {
     pub fn item_type(&self) -> MenuItemType {
-        self.item_type.clone()
+        self.item_type
     }
     pub fn label(&self) -> Option<String> {
         self.label.clone()

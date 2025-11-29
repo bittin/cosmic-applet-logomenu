@@ -35,10 +35,10 @@ fn is_running() -> bool {
             return false;
         }
 
-        if let Some(exe_path) = process.exe().and_then(|p| p.canonicalize().ok()) {
-            if current_exe.as_ref() == Some(&exe_path) {
-                return true;
-            }
+        if let Some(exe_path) = process.exe().and_then(|p| p.canonicalize().ok())
+            && current_exe.as_ref() == Some(&exe_path)
+        {
+            return true;
         }
 
         false

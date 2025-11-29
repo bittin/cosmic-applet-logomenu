@@ -22,6 +22,7 @@ pub struct LogoMenu {
     core: Core,
     popup: Option<Id>,
     config: LogoMenuConfig,
+    is_flatpak: bool,
     osd_cmd: String,
 }
 
@@ -59,6 +60,9 @@ impl Application for LogoMenu {
             })
             .unwrap_or_default();
 
+        // set flatpag flag
+        let is_flatpak = is_flatpak();
+
         // get cosmic_osd command based on the distro
         let osd_cmd = match is_nixos() {
             true => String::from("/run/current-system/sw/bin/cosmic-osd"),
@@ -69,6 +73,7 @@ impl Application for LogoMenu {
             core,
             popup: None,
             config,
+            is_flatpak,
             osd_cmd,
         };
         (app, Task::none())
@@ -80,7 +85,7 @@ impl Application for LogoMenu {
 
     fn view(&self) -> Element<'_, Self::Message> {
         // If custom logo is active and there is a valid one set
-        let logo_widget = if self.config.custom_logo_active == true
+        let logo_widget = if self.config.custom_logo_active
             && Path::new(&self.config.custom_logo_path).exists()
         {
             // Load custom logo
@@ -188,21 +193,18 @@ impl Application for LogoMenu {
                     power::PowerAction::Shutdown => "shutdown",
                     _ => return action.perform(),
                 };
-                let is_flatpak = is_flatpak();
 
-                if is_flatpak {
+                if self.is_flatpak {
                     if let Err(_err) = Command::new("flatpak-spawn")
                         .arg("--host")
                         .arg(&self.osd_cmd)
-                        .arg(&osd_arg)
+                        .arg(osd_arg)
                         .spawn()
                     {
                         return action.perform();
                     }
-                } else {
-                    if let Err(_err) = Command::new("cosmic-osd").arg(osd_arg).spawn() {
-                        return action.perform();
-                    }
+                } else if let Err(_err) = Command::new("cosmic-osd").arg(osd_arg).spawn() {
+                    return action.perform();
                 }
 
                 return close_popup(self.popup);
@@ -218,7 +220,7 @@ impl Application for LogoMenu {
                 }
             }
             Message::Run(action) => {
-                if is_flatpak()
+                if self.is_flatpak
                     && action != "cosmic-ext-logomenu-settings"
                     && action != "cosmic-logomenu-settings"
                 {

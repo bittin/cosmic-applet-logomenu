@@ -118,14 +118,8 @@ impl cosmic::Application for AppModel {
         let menu_items = get_menu_items();
 
         // get custom logo status and path
-        let custom_logo_active = match load_config("custom_logo_active", CONFIG_VER) {
-            Some(val) => val,
-            None => false,
-        };
-        let custom_logo_path = match load_config("custom_logo_path", CONFIG_VER) {
-            Some(val) => val,
-            None => "".to_owned(),
-        };
+        let custom_logo_active = load_config("custom_logo_active", CONFIG_VER).unwrap_or_default();
+        let custom_logo_path = load_config("custom_logo_path", CONFIG_VER).unwrap_or_default();
 
         let menu_types = vec![MenuItemType::LaunchAction, MenuItemType::PowerAction];
         let menu_type_labels: Vec<String> =
@@ -222,17 +216,16 @@ impl cosmic::Application for AppModel {
         page_content = page_content.push(Space::with_height(padding));
 
         // Set currently selected logo
-        let logo_widget =
-            if self.custom_logo_active == true && Path::new(&self.custom_logo_path).exists() {
-                widget::svg(widget::svg::Handle::from_path(&self.custom_logo_path))
-                    .symbolic(false)
-                    .width(150)
-            } else {
-                let logo_bytes = IMAGES[&self.selected_logo_name];
-                widget::svg(widget::svg::Handle::from_memory(logo_bytes.0))
-                    .symbolic(logo_bytes.1)
-                    .width(150)
-            };
+        let logo_widget = if self.custom_logo_active && Path::new(&self.custom_logo_path).exists() {
+            widget::svg(widget::svg::Handle::from_path(&self.custom_logo_path))
+                .symbolic(false)
+                .width(150)
+        } else {
+            let logo_bytes = IMAGES[&self.selected_logo_name];
+            widget::svg(widget::svg::Handle::from_memory(logo_bytes.0))
+                .symbolic(logo_bytes.1)
+                .width(150)
+        };
 
         // Display logo header
         page_content = page_content.push(
@@ -248,14 +241,12 @@ impl cosmic::Application for AppModel {
         // Menu settings
         let mut menu_settings = settings::section().add({
             Element::from(
-                settings::item::builder(fl!("use-custom-logo")).control(
-                    toggler(self.custom_logo_active)
-                        .on_toggle(|value| Message::ToggleCustomLogo(value)),
-                ),
+                settings::item::builder(fl!("use-custom-logo"))
+                    .control(toggler(self.custom_logo_active).on_toggle(Message::ToggleCustomLogo)),
             )
         });
-        if self.custom_logo_active == true {
-            let file_name = if &self.custom_logo_path != "" {
+        if self.custom_logo_active {
+            let file_name = if !&self.custom_logo_path.is_empty() {
                 Path::new(&self.custom_logo_path)
                     .file_name()
                     .unwrap()
@@ -348,7 +339,7 @@ impl cosmic::Application for AppModel {
                         let mut label_string = label;
                         let command_string = menu_item.command().unwrap_or_default();
 
-                        if command_string != "" {
+                        if !command_string.is_empty() {
                             label_string.push_str("   ::   ");
                             label_string.push_str(&command_string);
                         }
@@ -645,19 +636,16 @@ impl cosmic::Application for AppModel {
                     .set_directory("~/")
                     .pick_file();
 
-                match file {
-                    Some(path) => {
-                        let path_string = path.to_str().unwrap_or("");
-                        update_config(self.config.clone(), "custom_logo_path", &path_string);
-                        self.custom_logo_path = path_string.to_owned();
-                    }
-                    None => {}
+                if let Some(path) = file {
+                    let path_string = path.to_str().unwrap_or("");
+                    update_config(self.config.clone(), "custom_logo_path", &path_string);
+                    self.custom_logo_path = path_string.to_owned();
                 };
             }
 
             Message::AddItem(item_type) => {
                 let new_item = MenuItem {
-                    item_type: item_type.clone(),
+                    item_type,
                     label: match &item_type {
                         MenuItemType::LaunchAction => Some(fl!("new-launcher")),
                         _ => None,
