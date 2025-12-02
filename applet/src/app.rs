@@ -106,6 +106,7 @@ impl Application for LogoMenu {
             .applet
             .icon_button_from_handle(logo_widget)
             .on_press(Message::TogglePopup)
+            .padding(0)
             .into()
     }
 
