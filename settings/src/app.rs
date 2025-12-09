@@ -246,31 +246,25 @@ impl cosmic::Application for AppModel {
             )
         });
         if self.custom_logo_active {
-            let file_name = if !&self.custom_logo_path.is_empty() {
-                Path::new(&self.custom_logo_path)
-                    .file_name()
-                    .unwrap()
-                    .to_str()
-                    .unwrap_or("")
-            } else {
-                ""
-            };
-            menu_settings = menu_settings.add({
-                Element::from(
-                    settings::item::builder(file_name).control(
-                        widget::button::standard(fl!("select-custom-logo"))
-                            .on_press(Message::UpdateCustomLogo),
-                    ),
-                )
-            });
+            menu_settings = menu_settings.add(
+                settings::item::builder(if !&self.custom_logo_path.is_empty() {
+                    self.custom_logo_path.clone()
+                } else {
+                    fl!("custom-logo")
+                })
+                .description(fl!("custom-logo-tooltip"))
+                .control(
+                    widget::button::standard(fl!("select-custom-logo"))
+                        .on_press(Message::UpdateCustomLogo),
+                ),
+            );
         } else {
-            menu_settings = menu_settings.add({
-                Element::from(settings::item::builder(fl!("logo")).control(dropdown(
+            menu_settings =
+                menu_settings.add(settings::item::builder(fl!("logo")).control(dropdown(
                     &self.logo_options,
                     self.selected_logo_idx,
                     Message::UpdateLogo,
                 )))
-            })
         }
 
         page_content = page_content.push(menu_settings);
