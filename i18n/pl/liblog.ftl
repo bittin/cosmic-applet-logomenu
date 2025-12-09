@@ -1,6 +1,5 @@
-## The files liblog.ftl and cosmic_logomenu_settings.ftl are hard linked.
-## Please copy the whole directory when creating new languages to maintain this
-## But you will only need to edit one
+## The files liblog.ftl and cosmic_logomenu_settings.ftl are sym linked.
+## Please copy the whole directory when creating new languages to maintain this link
 
 # Settings UI
 about = O Logo Menu
@@ -10,7 +9,6 @@ app-title = COSMIC™ Logo Menu
 cancel = Anuluj
 command = Komenda
 custom-logo-path = Własna ścieżka logo
-custom-logo-path-desc = Wprowadź bezwzględną ścieżkę do SVG
 edit-menu-item = Edytuj element menu
 label = Etykieta
 logo = Logo

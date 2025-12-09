@@ -1,6 +1,5 @@
-## Filerna liblog.ftl och cosmic_logomenu_settings.ftl är hårdlänkade
-## Kopiera hela katalogen när du skapar nya språk för att bibehålla detta.
-## Men du behöver bara redigera en
+## The files liblog.ftl and cosmic_logomenu_settings.ftl are sym linked.
+## Please copy the whole directory when creating new languages to maintain this link
 
 # Inställningar för användargränssnitt
 about = Om
@@ -10,7 +9,6 @@ app-title = COSMIC™ logotyp-meny
 cancel = Avbryt
 command = Kommando
 custom-logo-path = Anpassad logotypsökväg
-custom-logo-path-desc = Ange absolut sökväg till en SVG
 edit-menu-item = Redigera menyalternativ
 label = Etikett
 logo = Logotyp
