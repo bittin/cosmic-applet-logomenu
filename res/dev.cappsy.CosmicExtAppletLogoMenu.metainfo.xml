@@ -57,23 +57,24 @@
     <category>Utility</category>
   </categories>
   <releases>
-    <release version="0.6.9" date="2025-11-28">
+    <release version="0.6.10" date="2025-12-10">
       <url type="details">
-        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.6.9
+        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.6.10
       </url>
       <description>
         <p><strong>0.6.9</strong></p>
         <ul>
-          <li>Finally fixed the issues with command execution on NixOS</li>
-          <li>Added Brazilian Portuguese translations - thanks to Azure-Orit</li>
+          <li>Fixed symbolic issues with custom logos</li>
+          <li>Added tooltip for custom logos</li>
+          <li>Added Russian translations - thanks to getsueineko</li>
           <li>Dependency updates</li>
         </ul>
-        <p><strong>0.6.0 - 0.6.8</strong></p>
+        <p><strong>0.6.0 - 0.6.9</strong></p>
         <ul>
           <li>Added the ability to use your own custom logos</li>
           <li>Expanded localisation to cover default menu items</li>
           <li>Improved the adding / editing experience on the Settings app</li>
-          <li>Added Swedish, Spanish, and Polish translations - thanks to Bittin, jsanchezba, and VandaLHJ</li>
+          <li>Added Swedish, Spanish, Polish and Brazilian Portuguese translations - thanks to Bittin, jsanchezba, VandaLHJ and Azure-Orit</li>
           <li>Added contributor link to the About page</li>
           <li>Added Alpine and postmarketOS logos</li>
           <li>Fixed bug that allowed multiple instances of the Settings app to open</li>
@@ -81,6 +82,7 @@
           <li>Small visual improvement for dividers in the settings app</li>
           <li>Changed Flatpak detection to be at build time to improve performance</li>
           <li>Improvements to command launching in the Flatpak environment</li>
+          <li>Fixed the issues with command execution on NixOS</li>
         </ul>
       </description>
     </release>
