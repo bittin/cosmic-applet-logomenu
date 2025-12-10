@@ -15,10 +15,10 @@ edit-menu-item = Редактировать пункт меню
 label = Метка
 logo = Логотип
 menu-items = Пункты меню
-new-launcher = Новый элемент запуска
+new-launcher = Новое меню запуска
 no-label = Без метки
 no-logo-selected = Логотип не выбран
-power-help-text = Введите одну из следующих команд для соответствующего действия питания: Lock, LogOut, Suspend, Restart или Shutdown
+power-help-text = Введите одну из следующих команд для соответствующего действия питания: Заблокировать, Выйти, Сон, Перезагрузить или Выключить
 remove = Удалить
 remove-item = Удалить пункт?
 reset = Сбросить
@@ -33,10 +33,10 @@ repository = Репозиторий
 contributors = Участники
 
 # Launch options
-launch-action = Действие запуска
+launch-action = Запуск
 custom-command = Пользовательская команда
 default-app = Приложение по умолчанию
-power-action = Действие питания
+power-action = Питание
 divider = Разделитель
 
 # Default app categories
