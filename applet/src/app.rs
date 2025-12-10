@@ -11,7 +11,7 @@ use cosmic::iced::{Limits, Subscription};
 use cosmic::iced_winit::commands::popup::{destroy_popup, get_popup};
 use cosmic::widget;
 use cosmic::{Application, Element};
-use liblog::{IMAGES, LogoMenuConfig, MenuItemType};
+use liblog::{LogoMenuConfig, MenuItemType, IMAGES};
 use std::fs;
 use std::path::Path;
 use std::process::Command;
@@ -90,6 +90,11 @@ impl Application for LogoMenu {
         {
             // Load custom logo
             cosmic::widget::icon::from_svg_bytes(fs::read(&self.config.custom_logo_path).unwrap())
+                .symbolic(if self.config.custom_logo_path.contains("-symbolic.svg") {
+                    true
+                } else {
+                    false
+                })
         } else {
             // Get the current logo with appropriate fallback
             let selected_logo_name = if IMAGES.contains_key(&self.config.logo) {
@@ -157,11 +162,10 @@ impl Application for LogoMenu {
     }
 
     fn subscription(&self) -> Subscription<Message> {
-        Subscription::batch(vec![
-            self.core
-                .watch_config(ID)
-                .map(|res| Message::ConfigUpdate(res.config)),
-        ])
+        Subscription::batch(vec![self
+            .core
+            .watch_config(ID)
+            .map(|res| Message::ConfigUpdate(res.config))])
     }
 
     fn update(&mut self, message: Self::Message) -> Task<Self::Message> {
