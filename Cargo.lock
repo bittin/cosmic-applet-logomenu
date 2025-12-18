@@ -675,9 +675,9 @@ dependencies = [
 
 [[package]]
 name = "bumpalo"
-version = "3.19.0"
+version = "3.19.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "46c5e41b57b8bba42a04676d81cb89e9ee8e859a1a66f80a5a72e1cb76b34d43"
+checksum = "5dd9dc738b7a8311c7ade152424974d8115f2cdad61e8dab8dac9f2362298510"
 
 [[package]]
 name = "by_address"
@@ -1022,7 +1022,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "0.1.0"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive",
@@ -1043,7 +1043,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "0.1.0"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "quote",
  "syn 2.0.111",
@@ -1051,7 +1051,7 @@ dependencies = [
 
 [[package]]
 name = "cosmic-ext-applet-logomenu"
-version = "0.6.9"
+version = "0.6.10"
 dependencies = [
  "libcosmic",
  "liblog",
@@ -1063,7 +1063,7 @@ dependencies = [
 
 [[package]]
 name = "cosmic-ext-logomenu-settings"
-version = "0.6.9"
+version = "0.6.10"
 dependencies = [
  "i18n-embed 0.15.4",
  "i18n-embed-fl 0.9.4",
@@ -1153,7 +1153,7 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "0.1.0"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "almost",
  "cosmic-config",
@@ -2320,7 +2320,7 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "dnd",
  "iced_accessibility",
@@ -2338,7 +2338,7 @@ dependencies = [
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -2347,7 +2347,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "bitflags 2.10.0",
  "bytes",
@@ -2372,7 +2372,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "futures",
  "iced_core",
@@ -2398,7 +2398,7 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "bitflags 2.10.0",
  "bytemuck",
@@ -2420,7 +2420,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -2432,7 +2432,7 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "bytes",
  "cosmic-client-toolkit",
@@ -2448,7 +2448,7 @@ dependencies = [
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -2464,7 +2464,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.10.0",
@@ -2495,7 +2495,7 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -2515,7 +2515,7 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.14.0-dev"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -2913,7 +2913,7 @@ checksum = "37c93d8daa9d8a012fd8ab92f088405fb202ea0b6ab73ee2482ae66af4f42091"
 [[package]]
 name = "libcosmic"
 version = "0.1.0"
-source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#dc3749bea6c593f60eb7c8c17d8a9ea6eacbfbdb"
+source = "git+https://github.com/cappsyco/libcosmic?branch=logomenu-patch#69cd94ac45398c091572c6774b3faa95f32abd52"
 dependencies = [
  "apply",
  "ashpd 0.12.0",
@@ -2971,7 +2971,7 @@ dependencies = [
 
 [[package]]
 name = "liblog"
-version = "0.6.9"
+version = "0.6.10"
 dependencies = [
  "cosmic-config",
  "i18n-embed 0.15.4",
@@ -2989,13 +2989,13 @@ checksum = "f9fbbcab51052fe104eb5e5d351cf728d30a5be1fe14d9be8a3b097481fb97de"
 
 [[package]]
 name = "libredox"
-version = "0.1.10"
+version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "416f7e718bdb06000964960ffa43b4335ad4012ae8b99060261aa4a8088d5ccb"
+checksum = "df15f6eac291ed1cf25865b1ee60399f57e7c227e7f51bdbd4c5270396a9ed50"
 dependencies = [
  "bitflags 2.10.0",
  "libc",
- "redox_syscall 0.5.18",
+ "redox_syscall 0.6.0",
 ]
 
 [[package]]
@@ -3234,9 +3234,9 @@ dependencies = [
 
 [[package]]
 name = "moxcms"
-version = "0.7.10"
+version = "0.7.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "80986bbbcf925ebd3be54c26613d861255284584501595cf418320c078945608"
+checksum = "ac9557c559cd6fc9867e122e20d2cbefc9ca29d80d027a8e39310920ed2f0a97"
 dependencies = [
  "num-traits",
  "pxfm",
@@ -4141,7 +4141,7 @@ version = "3.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "219cb19e96be00ab2e37d6e299658a0cfa83e52429179969b0f0121b4ac46983"
 dependencies = [
- "toml_edit 0.23.9",
+ "toml_edit 0.23.10+spec-1.0.0",
 ]
 
 [[package]]
@@ -4339,6 +4339,15 @@ name = "redox_syscall"
 version = "0.5.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ed2bf2547551a7053d6fdfafda3f938979645c44812fbfcda098faae3f1a362d"
+dependencies = [
+ "bitflags 2.10.0",
+]
+
+[[package]]
+name = "redox_syscall"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ec96166dafa0886eb81fe1c0a388bece180fbef2135f97c1e2cf8302e74b43b5"
 dependencies = [
  "bitflags 2.10.0",
 ]
@@ -5246,9 +5255,9 @@ checksum = "22cddaf88f4fbc13c51aebbf5f8eceb5c7c5a9da2ac40a13519eb5b0a0e8f11c"
 
 [[package]]
 name = "toml_datetime"
-version = "0.7.3"
+version = "0.7.5+spec-1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2cdb639ebbc97961c51720f858597f7f24c4fc295327923af55b74c3c724533"
+checksum = "92e1cfed4a3038bc5a127e35a2d360f145e1f4b971b551a2ba5fd7aedf7e1347"
 dependencies = [
  "serde_core",
 ]
@@ -5266,30 +5275,30 @@ dependencies = [
 
 [[package]]
 name = "toml_edit"
-version = "0.23.9"
+version = "0.23.10+spec-1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5d7cbc3b4b49633d57a0509303158ca50de80ae32c265093b24c414705807832"
+checksum = "84c8b9f757e028cee9fa244aea147aab2a9ec09d5325a9b01e0a49730c2b5269"
 dependencies = [
  "indexmap",
- "toml_datetime 0.7.3",
+ "toml_datetime 0.7.5+spec-1.1.0",
  "toml_parser",
  "winnow 0.7.14",
 ]
 
 [[package]]
 name = "toml_parser"
-version = "1.0.4"
+version = "1.0.6+spec-1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c0cbe268d35bdb4bb5a56a2de88d0ad0eb70af5384a99d648cd4b3d04039800e"
+checksum = "a3198b4b0a8e11f09dd03e133c0280504d0801269e9afa46362ffde1cbeebf44"
 dependencies = [
  "winnow 0.7.14",
 ]
 
 [[package]]
 name = "tracing"
-version = "0.1.43"
+version = "0.1.44"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d15d90a0b5c19378952d479dc858407149d7bb45a14de0142f6c534b16fc647"
+checksum = "63e71662fa4b2a2c3a26f570f037eb95bb1f85397f3cd8076caed2f026a6d100"
 dependencies = [
  "log",
  "pin-project-lite",
@@ -5310,9 +5319,9 @@ dependencies = [
 
 [[package]]
 name = "tracing-core"
-version = "0.1.35"
+version = "0.1.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a04e24fab5c89c6a36eb8558c9656f30d81de51dfa4d3b45f26b21d61fa0a6c"
+checksum = "db97caf9d906fbde555dd62fa95ddba9eecfd14cb388e4f491a66d74cd5fb79a"
 dependencies = [
  "once_cell",
 ]
@@ -6988,9 +6997,9 @@ checksum = "111f7d9820f05fd715df3144e254d6fc02ee4088b0644c0ffd0efc9e6d9d2773"
 
 [[package]]
 name = "zune-jpeg"
-version = "0.5.6"
+version = "0.5.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f520eebad972262a1dde0ec455bce4f8b298b1e5154513de58c114c4c54303e8"
+checksum = "51d915729b0e7d5fe35c2f294c5dc10b30207cc637920e5b59077bfa3da63f28"
 dependencies = [
  "zune-core",
 ]
