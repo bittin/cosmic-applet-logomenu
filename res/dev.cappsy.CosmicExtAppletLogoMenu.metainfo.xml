@@ -57,12 +57,12 @@
     <category>Utility</category>
   </categories>
   <releases>
-    <release version="0.6.10" date="2025-12-10">
+    <release version="0.6.11" date="2025-12-18">
       <url type="details">
-        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.6.10
+        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.6.11
       </url>
       <description>
-        <p><strong>0.6.10</strong></p>
+        <p><strong>0.6.11</strong></p>
         <ul>
           <li>Fixed symbolic issues with custom logos</li>
           <li>Added tooltip for custom logos</li>
