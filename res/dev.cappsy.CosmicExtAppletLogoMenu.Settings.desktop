@@ -9,5 +9,5 @@ Exec=cosmic-ext-logomenu-settings
 Terminal=false
 StartupNotify=true
 StartupWMClass=cosmic-ext-logomenu-settings
-Categories=COSMIC;
+Categories=COSMIC;Settings
 Keywords=COSMIC
