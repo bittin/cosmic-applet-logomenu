@@ -33,24 +33,6 @@ git clone https://aur.archlinux.org/cosmic-ext-applet-logomenu-git.git
 cd cosmic-ext-applet-logomenu-git && makepkg -si
 ```
 
-## Manual installation
-
-Two binaries are currently required for the Logo Menu to be fully functional (one for the applet itself and a separate settings app). You can get these binaries from the [latest release](https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/latest) and install using the following instructions.
-
-### .deb distros (Pop!\_OS, Debian, Ubuntu etc.)
-
-```sh
-sudo dpkg -i cosmic-ext-applet-logomenu_0.6.5_amd64.deb
-sudo dpkg -i cosmic-ext-logomenu-settings_0.6.5_amd64.deb
-```
-
-### .rpm distros (Fedora, Nobara etc.)
-
-```sh
-sudo dnf install cosmic-ext-applet-logomenu-0.6.5-1.fc42.x86_64.rpm
-sudo dnf install cosmic-ext-logomenu-settings-0.6.5-1.fc42.x86_64.rpm
-```
-
 
 
 ## With thanks & Credit
