@@ -1,10 +1,10 @@
 # Logo Menu (for the COSMIC™ Desktop)
 
-![The Logo Menu logo, showing a mouse pointer clicking on a logo of Pop!_OS.](https://raw.githubusercontent.com/cappsyco/cosmic-ext-applet-logomenu/refs/heads/main/res/logo.png)
+![The Logo Menu logo, showing a mouse pointer clicking on a logo of Pop!_OS.](https://raw.githubusercontent.com/cosmic-utils/cosmic-ext-applet-logomenu/refs/heads/main/res/logo.png)
 
 A simple logo menu (in the style of the popular [GNOME extension](https://github.com/Aryan20/Logomenu)) to collect your launcher options in a nice menu.
 
-![A view of the open applet with the default menu items, alongside the included settings application.](https://raw.githubusercontent.com/cappsyco/cosmic-ext-applet-logomenu/main/screenshots/cosmic-ext-applet-logomenu.png)
+![A view of the open applet with the default menu items, alongside the included settings application.](https://raw.githubusercontent.com/cosmic-utils/cosmic-ext-applet-logomenu/main/screenshots/cosmic-ext-applet-logomenu.png)
 
 ## Flatpak installation (recommended)
 
