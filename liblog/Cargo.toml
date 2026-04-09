@@ -1,6 +1,6 @@
 [package]
 name = "liblog"
-version = "0.6.11"
+version = "0.7.0"
 license = "GPL-3.0"
 edition = "2024"
 

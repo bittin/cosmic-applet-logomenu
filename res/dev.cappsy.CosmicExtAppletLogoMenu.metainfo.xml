@@ -20,8 +20,8 @@
   </url>
   <content_rating type="oars-1.1" />
   <name>Logo Menu</name>
-  <name xml:lang="cs">Menu s logem</name> 
-  <name xml:lang="uk">Логотипменю</name>  
+  <name xml:lang="cs">Menu s logem</name>
+  <name xml:lang="uk">Логотипменю</name>
   <summary>Customisable menu applet for the COSMIC™ desktop</summary>
   <summary xml:lang="cs">Přizpůsobitelný applet menu pro prostředí COSMIC™</summary>
   <summary xml:lang="uk">Налаштовуваний віджет меню для середовища COSMIC™</summary>
@@ -82,32 +82,14 @@
     <category>Utility</category>
   </categories>
   <releases>
-    <release version="0.6.11" date="2025-12-18">
+    <release version="0.7.0" date="2026-04-09">
       <url type="details">
         https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.6.11
       </url>
       <description>
-        <p><strong>0.6.11</strong></p>
+        <p><strong>0.7.0</strong></p>
         <ul>
-          <li>Fixed symbolic issues with custom logos</li>
-          <li>Added tooltip for custom logos</li>
-          <li>Added Russian translations - thanks to getsueineko</li>
-          <li>Dependency updates</li>
-        </ul>
-        <p><strong>0.6.0 - 0.6.9</strong></p>
-        <ul>
-          <li>Added the ability to use your own custom logos</li>
-          <li>Expanded localisation to cover default menu items</li>
-          <li>Improved the adding / editing experience on the Settings app</li>
-          <li>Added Swedish, Spanish, Polish and Brazilian Portuguese translations - thanks to Bittin, jsanchezba, VandaLHJ and Azure-Orit</li>
-          <li>Added contributor link to the About page</li>
-          <li>Added Alpine and postmarketOS logos</li>
-          <li>Fixed bug that allowed multiple instances of the Settings app to open</li>
-          <li>Fixed a bug that prevented more complex custom commands from running correctly</li>
-          <li>Small visual improvement for dividers in the settings app</li>
-          <li>Changed Flatpak detection to be at build time to improve performance</li>
-          <li>Improvements to command launching in the Flatpak environment</li>
-          <li>Fixed the issues with command execution on NixOS</li>
+            <li>Rebased to the latest libcosmic (lots of under the hood changes and optimisations!)</li>
         </ul>
       </description>
     </release>
