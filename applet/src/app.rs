@@ -7,8 +7,10 @@ use cosmic::applet::{menu_button, padded_control};
 use cosmic::cosmic_config::{Config, CosmicConfigEntry};
 use cosmic::cosmic_theme::Spacing;
 use cosmic::iced::window::Id;
-use cosmic::iced::{Limits, Subscription};
-use cosmic::iced_winit::commands::popup::{destroy_popup, get_popup};
+use cosmic::iced::{
+    Limits, Subscription,
+    platform_specific::shell::commands::popup::{destroy_popup, get_popup},
+};
 use cosmic::widget;
 use cosmic::{Application, Element};
 use liblog::{IMAGES, LogoMenuConfig, MenuItemType};
@@ -123,7 +125,7 @@ impl Application for LogoMenu {
         // Get the menu from config
         let config_menuitems = &self.config.menu_items;
 
-        let mut content_list = widget::column().padding([8, 0]).spacing(0);
+        let mut content_list = widget::column([]).padding([8, 0]).spacing(0);
         for item in &config_menuitems.items {
             match item.item_type() {
                 MenuItemType::LaunchAction => {

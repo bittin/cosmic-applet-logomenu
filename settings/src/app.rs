@@ -4,12 +4,12 @@ use crate::config::{load_config, update_config};
 use cosmic::app::context_drawer;
 use cosmic::app::context_drawer::ContextDrawer;
 use cosmic::cosmic_config::Config;
+use cosmic::iced::widget::rule;
 use cosmic::iced::{Alignment, Length, Radius};
-use cosmic::iced_widget::{rule, scrollable};
 use cosmic::prelude::*;
 use cosmic::theme;
 use cosmic::widget::{
-    self, Space, about, about::About, container, dropdown, menu, settings, toggler,
+    self, Space, about, about::About, container, dropdown, menu, scrollable, settings, toggler,
 };
 use liblog::fl;
 use liblog::{IMAGES, MenuItem, MenuItemType, MenuItems, PowerActionOption};
@@ -199,15 +199,15 @@ impl cosmic::Application for AppModel {
         };
 
         // Start container
-        let mut page_content = widget::column()
+        let mut page_content = widget::column([])
             .padding(0.)
             .width(Length::Fill)
             .align_x(Alignment::Start);
 
         // Title
         page_content = page_content.push(
-            widget::row().push(
-                widget::column()
+            widget::row([]).push(
+                widget::column([])
                     .push(widget::text::title3(fl!("app-title")))
                     .width(Length::Fill)
                     .align_x(Alignment::Center),
@@ -229,8 +229,8 @@ impl cosmic::Application for AppModel {
 
         // Display logo header
         page_content = page_content.push(
-            widget::row().push(
-                widget::column()
+            widget::row([]).push(
+                widget::column([])
                     .push(logo_widget)
                     .width(Length::Fill)
                     .align_x(Alignment::Center),
@@ -302,7 +302,7 @@ impl cosmic::Application for AppModel {
         let menu_items = &self.menu_items;
 
         for (i, menu_item) in menu_items.iter().enumerate() {
-            let mut menu_item_row = widget::row().push(
+            let mut menu_item_row = widget::row([]).push(
                 widget::row::with_capacity(2)
                     .push(
                         widget::button::icon(widget::icon::from_name("pan-up-symbolic"))
