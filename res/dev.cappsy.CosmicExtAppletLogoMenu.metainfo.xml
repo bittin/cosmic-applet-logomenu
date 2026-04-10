@@ -70,14 +70,15 @@
     <category>Utility</category>
   </categories>
   <releases>
-    <release version="0.7.0" date="2026-04-09">
+    <release version="0.7.1" date="2026-04-10">
       <url type="details">
-        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.7.0
+        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.7.1
       </url>
       <description>
-        <p>0.7.0</p>
+        <p>0.7.1</p>
         <ul>
             <li>Rebased to the latest libcosmic (lots of under the hood changes and optimisations!)</li>
+            <li>Metainfo corrections</li>
         </ul>
       </description>
     </release>
