@@ -27,30 +27,18 @@
   <summary xml:lang="uk">Налаштовуваний віджет меню для середовища COSMIC™</summary>
   <description>
     <p>**Important notice: If you've previously installed this applet please refer to the 'Homepage' link below for instructions on migrating.**</p>
-    <p>
-      <ul>
-        <li>Pick your distro logo of choice for your menu. The one you want not there? Then you can add your own custom one!</li>
-        <li>Fully customise your menu with items that launch custom commands.</li>
-        <li>Bring all your common applications and actions into one, neat place!</li>
-      </ul>
-    </p>
-  </description>
-  <description xml:lang="cs">
-    <p>**Důležité upozornění: Pokud jste tento applet již dříve nainstalovali, podívejte se prosím na odkaz 'Domovská stránka' níže pro instrukce k migraci.**</p>
-    <p>
-      <ul>
-        <li>Vyberte si libovolné logo distribuce pro své menu. To, které chcete, tam není? Pak si můžete přidat vlastní! </li>
-        <li>Plně přizpůsobte své menu položkami, které spouští vlastní příkazy.</li>
-        <li>Umístěte všechny své běžné aplikace a akce na jedno přehledné místo!</li>
-      </ul>
-    </p>
-  </description>
-  <description xml:lang="uk">
-    <p>**Увага! Якщо ви раніше встановлювали цей віджет, завітайте за посиланням «Домашня сторінка» нижче, щоб дізнатися, як легко оновити його до останньої версії.**</p>
+    <p xml:lang="cs">**Důležité upozornění: Pokud jste tento applet již dříve nainstalovali, podívejte se prosím na odkaz 'Domovská stránka' níže pro instrukce k migraci.**</p>
+    <p xml:lang="uk">**Увага! Якщо ви раніше встановлювали цей віджет, завітайте за посиланням «Домашня сторінка» нижче, щоб дізнатися, як легко оновити його до останньої версії.**</p>
     <ul>
-      <li>Оберіть логотип свого дистрибутива або додайте свій унікальний!</li>
-      <li>Налаштуйте меню під себе з власними командами.</li>
-      <li>Збирайте всі улюблені застосунки та дії в одному місці!</li>
+      <li>Pick your distro logo of choice for your menu. The one you want not there? Then you can add your own custom one!</li>
+      <li xml:lang="cs">Vyberte si libovolné logo distribuce pro své menu. To, které chcete, tam není? Pak si můžete přidat vlastní! </li>
+      <li xml:lang="uk">Оберіть логотип свого дистрибутива або додайте свій унікальний!</li>
+      <li>Fully customize your menu with items that launch custom commands.</li>
+      <li xml:lang="cs">Plně přizpůsobte své menu položkami, které spouští vlastní příkazy.</li>
+      <li xml:lang="uk">Налаштуйте меню під себе з власними командами.</li>
+      <li>Bring all your common applications and actions into one, neat place!</li>
+      <li xml:lang="cs">Umístěte všechny své běžné aplikace a akce na jedno přehledné místo!</li>
+      <li xml:lang="uk">Збирайте всі улюблені застосунки та дії в одному місці!</li>
     </ul>
   </description>
   <launchable type="desktop-id">
@@ -87,7 +75,7 @@
         https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.7.0
       </url>
       <description>
-        <p><strong>0.7.0</strong></p>
+        <p>0.7.0</p>
         <ul>
             <li>Rebased to the latest libcosmic (lots of under the hood changes and optimisations!)</li>
         </ul>
