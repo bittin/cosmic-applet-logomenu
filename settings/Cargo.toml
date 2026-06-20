@@ -7,17 +7,15 @@ description = "Settings application for COSMIC Logo Menu applet"
 repository = "https://github.com/cappsyco/cosmic-ext-applet-logomenu"
 
 [dependencies]
-i18n-embed-fl = "0.10.0"
-rust-embed = "8.11.0"
 serde = "1.0.228"
 liblog = { path = "../liblog" }
 rfd = "0.17.2"
-sysinfo = "0.38.4"
-open = "5.3.3"
+sysinfo = "0.39.3"
+open = "5.3.5"
 
 [dependencies.i18n-embed]
 version = "0.16.0"
-features = ["fluent-system", "desktop-requester"]
+features = ["desktop-requester"]
 
 [dependencies.libcosmic]
 git = "https://github.com/pop-os/libcosmic.git"

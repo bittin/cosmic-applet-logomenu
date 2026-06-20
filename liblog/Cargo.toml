@@ -5,7 +5,6 @@ license = "GPL-3.0"
 edition = "2024"
 
 [dependencies]
-i18n-embed-fl = "0.10.0"
 rust-embed = "8.11.0"
 phf = "0.13.1"
 serde = "1.0.228"
