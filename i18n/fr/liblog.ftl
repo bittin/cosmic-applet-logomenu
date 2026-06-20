@@ -1,6 +1,3 @@
-## The files liblog.ftl and cosmic_logomenu_settings.ftl are sym linked.
-## Please copy the whole directory when creating new languages to maintain this link
-
 # Settings UI
 about = À propos
 add-divider = Ajouter un séparateur
