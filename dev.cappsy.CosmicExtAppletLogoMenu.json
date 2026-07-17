@@ -13,7 +13,7 @@
     "--socket=fallback-x11",
     "--socket=system-bus",
     "--socket=session-bus",
-    "--talk-name=com.system76.CosmicSettingsDaemon",
+    "--talk-name=com.system76.CosmicSettingsDaemon.*",
     "--talk-name=org.freedesktop.Flatpak",
     "--talk-name=org.freedesktop.login1",
     "--talk-name=org.freedesktop.ScreenSaver",
