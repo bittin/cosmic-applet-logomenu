@@ -70,15 +70,16 @@
     <category>Utility</category>
   </categories>
   <releases>
-    <release version="0.7.1" date="2026-04-10">
+    <release version="0.8.0" date="2026-07-25">
       <url type="details">
-        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.7.1
+        https://github.com/cappsyco/cosmic-ext-applet-logomenu/releases/tag/v0.8.0
       </url>
       <description>
-        <p>0.7.1</p>
+        <p>0.8.0</p>
         <ul>
-            <li>Rebased to the latest libcosmic (lots of under the hood changes and optimisations!)</li>
-            <li>Metainfo corrections</li>
+            <li>Rebased to the latest libcosmic, now with added frosted glass support</li>
+            <li>Added French localisations (thanks,  roxfr!)</li>
+            <li>Refactored how localisations are managed in the repo, making things simpler for contributors</li>
         </ul>
       </description>
     </release>

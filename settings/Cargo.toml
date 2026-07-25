@@ -1,17 +1,17 @@
 [package]
 name = "cosmic-ext-logomenu-settings"
-version = "0.7.1"
+version = "0.8.0"
 edition = "2024"
 license = "GPL-3.0"
 description = "Settings application for COSMIC Logo Menu applet"
 repository = "https://github.com/cappsyco/cosmic-ext-applet-logomenu"
 
 [dependencies]
-serde = "1.0.228"
+serde = "1.0.229"
 liblog = { path = "../liblog" }
 rfd = "0.17.2"
-sysinfo = "0.39.3"
-open = "5.3.5"
+sysinfo = "0.39.6"
+open = "5.4.0"
 
 [dependencies.i18n-embed]
 version = "0.16.0"

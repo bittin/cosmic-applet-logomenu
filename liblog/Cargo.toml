@@ -1,13 +1,13 @@
 [package]
 name = "liblog"
-version = "0.7.1"
+version = "0.8.0"
 license = "GPL-3.0"
 edition = "2024"
 
 [dependencies]
-rust-embed = "8.11.0"
-phf = "0.13.1"
-serde = "1.0.228"
+rust-embed = "8.12.0"
+phf = { version = "0.14.0", "features" = ["macros"] }
+serde = "1.0.229"
 cosmic-config = { git = "https://github.com/pop-os/libcosmic" }
 
 [dependencies.i18n-embed]
